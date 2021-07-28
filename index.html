@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Material Design for Bootstrap</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/favicons/favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <link rel="stylesheet" href="plugins/css/cookie.min.css" />
+</head>
+
+<body onload="loadAwal();">
+  <!-- Facebook login -->
+  <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v11.0&appId=81849056149&autoLogAppEvents=1" nonce="SAaqz2HH"></script>
+
+  <!-- Start your project here-->
+<!--navbar-->
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+        <img
+          src="/img/favicons/favicon-16x16.png"
+          height="15"
+          alt=""
+          loading="lazy"
+        />
+      </a>
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Kelas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pertanyaan</a>
+        </li>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+
+    <!-- Right elements -->
+    <div class="d-flex align-items-center">
+      <!-- Icon -->
+
+
+      <!-- Notifications -->
+      <a
+        class="me-3 dropdown-toggle hidden-arrow"
+        href="#"
+        id="navbarDropdownMenuLink"
+        role="button"
+        data-mdb-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <i class="fas fa-bell"></i>
+        <span class="badge rounded-pill badge-notification bg-danger">1</span>
+      </a>
+      <ul
+        class="dropdown-menu dropdown-menu-end"
+        aria-labelledby="navbarDropdownMenuLink"
+      >
+        <li>
+          <a class="dropdown-item" href="#">Some news</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Another news</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </li>
+      </ul>
+
+      <!-- Avatar -->
+      <a class=" me-3  text-black" href="#"   role="button"
+      data-mdb-toggle="dropdown"
+      aria-expanded="false" >
+        <span class='showNama'></span>
+      </a>
+      
+
+      <ul
+        class="dropdown-menu dropdown-menu-end"
+        aria-labelledby="navbarDropdownMenuLink"
+      >
+        <li>
+          <a class="dropdown-item" href="#">My profile</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Settings</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Logout</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+<!--navbar-->
+
+  <div id="preview" class="preview">
+    <div style="display: none;"></div>
+    <div>
+      <div style="position: relative;" data-draggable="true" draggable="false" class="">
+        <!---->
+        <!---->
+        <section draggable="false" class="overflow-hidden pt-0" data-v-271253ee="">
+          <section class="mb-8">
+            <style>
+              .page-header {
+                padding: 0;
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                background-size: cover;
+                background-position: 50%;
+              }
+  
+              .oblique {
+                transform: skewX(-10deg);
+                overflow: hidden;
+                width: 60%;
+                right: -10rem;
+                border-bottom-left-radius: 0.75rem;
+              }
+  
+              .img-oblique {
+                transform: skewX(10deg);
+              }
+  
+              .img-settings {
+                image-rendering: pixelated;
+                filter: brightness(110%) contrast(110%) saturate(100%);
+              }
+  
+              .fw-900 {
+                font-weight: 900;
+              }
+            </style>
+            <div class="page-header" style="min-height: 75vh;">
+              <div class="oblique position-absolute top-0 h-100 d-md-block d-none gradient-custom-10">
+                <div class="img-oblique position-absolute fixed-top ms-auto h-100 img-settings"
+                  style="margin-left: -4.1rem !important; z-index: 0; background-size: cover; background-position: 50% 50%; background-color: transparent; background-image: url(&quot;https://images.unsplash.com/photo-1486663845017-3eedaa78617f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=Mnw5NjI0M3wwfDF8c2VhcmNofDd8fHdvbWFufGVufDB8fHx8MTYyNzAzMTc0Nw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&quot;);"
+                  aria-controls="#picker-editor"></div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6 col-md-7 d-flex justify-content-center flex-column">
+                    <h2 class="lh-1 ls-tight fw-900 mb-1" style="font-size: 3.75rem;">Kontribusi = poin<br></h2>
+                    <h2 class="lh-1 ls-tight fw-900 text-primary mb-4" style="font-size: 3.75rem;">Free Kelas / Produk<br>
+                    </h2>
+                    <p class="mt-1 pe-lg-5 me-lg-5 lead fw-normal text-muted">Jadikan kegiatan sehari-hari menjadi
+                      bermanfaat bagi komunitas dan diri sendiri<br></p>
+                    <div class="buttons"> <a href="#!" type="button" class="btn           btn-primary btn-lg mt-4 me-2"
+                        aria-controls="#picker-editor" draggable="false">Get Started</a> <a href="#!" type="button"
+                        class="btn           btn-link btn-lg mt-4" aria-controls="#picker-editor" draggable="false">Read
+                        more</a> </div>
+<p class="mt-2 pe-lg-5 me-lg-5 lead fw-normal text-muted">Total Poin dikumpulkan : </p>
+<div class="progress" style="height: 20px;">
+  <div
+    class="progress-bar"
+    role="progressbar"
+    style="width: 25%;"
+    aria-valuenow="25"
+    aria-valuemin="0"
+    aria-valuemax="100"
+  >
+    25%
+  </div>
+</div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+        <!---->
+      </div>
+      <div style="position: relative;" data-draggable="true" class="" draggable="false">
+        <!---->
+        <!---->
+        <section draggable="false" class="container pt-5" data-v-271253ee="">
+          <section class="mb-8">
+            <div class="row">
+              <div class="col-12">
+                <h2 class="fs-1 mb-2 pb-1" style="font-weight: 900;">Berita terbaru<br></h2>
+                <p class="fs-5 opacity-80 mb-0 pb-3">Dari ujung ke ujung Indonesia, kami berbagi berita, keceriaan dan
+                  inspirasi<br></p>
+              </div>
+            </div>
+            <hr class="mt-4 mb-5" style="height: 2px; opacity: 0.1;">
+            <div class="row">
+              <div class="col-md-12 col-lg-4 mb-5">
+                <div>
+                  <div class="pb-3">
+                    <p class="pb-1 fw-normal"><span class="badge rounded-pill badge-primary fs-6 fw-normal">Jawa
+                        Timur</span></p>
+                    <h5 class="mb-3">Boost your conversion rate</h5>
+                    <p class="text-muted">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                      adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore.</p>
+                  </div>
+                  <div class="d-flex flex-row align-items-center"> <img
+                      src="https://mdbootstrap.com/img/Photos/Avatars/img%20(33).jpg" class="rounded-circle" alt="avatar"
+                      loading="lazy" aria-controls="#picker-editor" draggable="false" height="45">
+                    <div class="ms-3">
+                      <p class="mb-0" style="font-size: .875rem; font-weight: 500;">Giulia Trovato</p>
+                      <p class="mb-0 opacity-80" style="font-size: .875rem;">Mar 16, 2021 • 7 min read</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 mb-5">
+                <div>
+                  <div class="pb-3">
+                    <p class="pb-1 fw-normal"><span class="badge rounded-pill badge-danger fs-6 fw-normal">Jakarta</span>
+                    </p>
+                    <h5 class="mb-3">How to use search engine optimization to drive sales</h5>
+                    <p class="text-muted">Ratione nulla, deserunt error quos ducimus debitis, maiores nobis natus iure,
+                      aspernatur impedit consectetur architecto saepe omnis nam quae.</p>
+                  </div>
+                  <div class="d-flex flex-row align-items-center"> <img
+                      src="https://mdbootstrap.com/img/Photos/Avatars/img%20(22).jpg" class="rounded-circle" alt="avatar"
+                      loading="lazy" aria-controls="#picker-editor" draggable="false" height="45">
+                    <div class="ms-3">
+                      <p class="mb-0" style="font-size: .875rem; font-weight: 500;">Chiara Altieri</p>
+                      <p class="mb-0 opacity-80" style="font-size: .875rem;">Mar 15, 2021 • 6 min read</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 mb-5">
+                <div>
+                  <div class="pb-3">
+                    <p class="pb-1 fw-normal"><span class="badge rounded-pill badge-success fs-6 fw-normal">Kalimantan
+                        Selatan</span></p>
+                    <h5 class="mb-3">Improve your customer experience</h5>
+                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit, voluptas earum omnis
+                      eaque laboriosam dolor.</p>
+                  </div>
+                  <div class="d-flex flex-row align-items-center"> <img
+                      src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg" class="rounded-circle" alt="avatar"
+                      loading="lazy" aria-controls="#picker-editor" draggable="false" height="45">
+                    <div class="ms-3">
+                      <p class="mb-0" style="font-size: .875rem; font-weight: 500;">Alice Russo</p>
+                      <p class="mb-0 opacity-80" style="font-size: .875rem;">Mar 14, 2021 • 8 min read</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+        <!---->
+      </div>
+      <div style="position: relative;" data-draggable="true" class="" draggable="false">
+        <!---->
+        <!---->
+        <section draggable="false" class="container pt-5" data-v-271253ee="">
+          <section class="position-relative">
+            <style>
+              @media (min-width: 768px) {
+                #cta-img-nml-50 {
+                  margin-left: 50px;
+                }
+              }
+            </style>
+            <div class="row gx-0">
+              <div class="col-md-5 mb-4 mb-md-0">
+                <div class="d-flex py-md-5"> <img
+                    src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=Mnw5NjI0M3wwfDF8c2VhcmNofDd8fGtpZHN8ZW58MHx8fHwxNjI2OTY4OTM2&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080"
+                    class="w-100 rounded-5 shadow-3-strong" id="cta-img-nml-50" style="z-index: 10;" alt=""
+                    aria-controls="#picker-editor" draggable="false"> </div>
+              </div>
+              <div class="col-md-7 mb-4 mb-md-0">
+                <div class=" bg-primary h-100 rounded-6 p-4 ps-md-5 text-white d-flex align-items-center "
+                  style="z-index: -10; background-size: auto; background-position: 0% 0%; background-image: url(&quot;none&quot;); background-color: rgb(18, 102, 241);"
+                  aria-controls="#picker-editor">
+                  <div class="ps-5">
+                    <h2 class="fw-bold mb-4">Berbagi tips pengasuhan<br></h2>
+                    <p class="mb-4">Setiap orang tua itu spesial, mari simpan momen-momen bersama anak untuk catatan dan
+                      review pertumbuhannya di masa depan menjadi anak yang luar biasa<br></p><a type="button"
+                      class="btn btn-outline-white btn-rounded btn-lg ripple-surface" aria-controls="#picker-editor"
+                      draggable="false" style="min-width: auto;">Catat momen</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+        <!---->
+      </div>
+      <div style="position: relative;" data-draggable="true" class="" draggable="false">
+        <!---->
+        <!---->
+        <section draggable="false" class="container pt-5" data-v-271253ee="">
+          <section class="">
+            <div class=" d-block d-md-flex justify-content-between align-items-center text-center text-md-start ">
+              <div>
+                <h2 class="fw-bold mb-3"> <span>Ready to start?</span> <br><span class="text-primary">Register for free
+                    today.</span> </h2>
+              </div>
+              <div> <a type="button" class="btn              btn-link btn-rounded" data-ripple-color="primary"
+                  aria-controls="#picker-editor" draggable="false">Learn more</a> 
+                  <button type="button" class="btn btn-primary btn-rounded" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+                    Login
+                  </button>
+                </div>
+            </div>
+          </section>
+        </section>
+        <!---->
+      </div>
+      <footer class="text-center text-white" style="background-color: #caced1;">
+        <!-- Grid container -->
+        <div class="container p-4">
+          <!-- Section: Iframe -->
+          <section class="">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-6">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    class="shadow-1-strong rounded"
+                    src="https://www.youtube.com/embed/_lIdQlevFV0"
+                    title="YouTube video"
+                    allowfullscreen
+                  ></iframe>
+
+    
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Section: Iframe -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2020 Copyright:
+          <a class="text-white" style="color:rgb(241, 100, 18);" href="https://ibw.news/">Indonesian Babywearers</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+      
+    </div>
+  </div>
+
+
+<!-- Modal -->
+<div class="modal top fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-mdb-backdrop="true" data-mdb-keyboard="true">
+  <div class="modal-dialog  ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login / Register </h5>
+        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="card-body p-4">
+          <!-- Pills navs -->
+          <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="tab-login" data-mdb-toggle="pill" href="#pills-login" role="tab"
+                aria-controls="pills-login" aria-selected="true">Login</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="tab-register" data-mdb-toggle="pill" href="#pills-register" role="tab"
+                aria-controls="pills-register" aria-selected="false">Register</a>
+            </li>
+          </ul>
+          <!-- Pills navs -->
+
+          <!-- Pills content -->
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+              <form>
+                <div class="text-center mb-3">
+                <fb:login-button 
+  scope="public_profile,email" 
+  onlogin="checkLoginState();">
+</fb:login-button>
+                  <button type="button" class="btn btn-primary btn-floating mx-1 d-none">
+                    <i class="fab fa-facebook-f"></i>
+                  </button>
+
+                  <button type="button" class="btn btn-primary btn-floating mx-1 d-none">
+                    <i class="fab fa-google"></i>
+                  </button>
+
+                  <button type="button" class="btn btn-primary btn-floating mx-1 d-none">
+                    <i class="fab fa-twitter"></i>
+                  </button>
+
+                  <button type="button" class="btn btn-primary btn-floating mx-1 d-none">
+                    <i class="fab fa-github"></i>
+                  </button>
+                </div>
+
+                <p class="text-center">or:</p>
+
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" id="loginName" class="form-control" />
+                  <label class="form-label" for="loginName">Email or whatsapp number (62xxxxxx)</label>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block mb-4">
+                  Sign in
+                </button>
+
+                <!-- Register buttons -->
+                <div class="text-center">
+                  <p>Not a member? <a href="#!">Register</a></p>
+                </div>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+              <form>
+                <div class="text-center mb-3">
+                  <p>Sign up with:</p>
+           
+                  <button type="button"  scope="public_profile,email"  class="btn btn-primary btn-floating mx-1  d-none" onclick="checkLoginState();">
+                    <i class="fab fa-facebook-f"></i>
+                  </button>
+
+
+                  <button type="button" class="btn btn-primary btn-floating mx-1 d-none">
+                    <i class="fab fa-google"></i>
+                  </button>
+
+                  <button type="button" class="btn btn-primary btn-floating mx-1 d-none">
+                    <i class="fab fa-twitter"></i>
+                  </button>
+
+                  <button type="button" class="btn btn-primary btn-floating mx-1 d-none">
+                    <i class="fab fa-github"></i>
+                  </button>
+                </div>
+
+                <p class="text-center">or:</p>
+
+                <!-- Name input -->
+                <div class="form-outline mb-4">
+                  <input type="text" id="registerName" class="form-control" />
+                  <label class="form-label" for="registerName">Name</label>
+                </div>
+
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" id="registerEmail" class="form-control" />
+                  <label class="form-label" for="registerEmail">Email</label>
+                </div>
+                <!-- WA input -->
+                <div class="form-outline mb-4">
+                  <input type="email" id="registerWa" class="form-control" />
+                  <label class="form-label" for="registerWa">Whatsapp (62xxxxxx)</label>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block mb-3">
+                  Sign Up 
+                </button>
+              </form>
+            </div>
+          </div>
+          <!-- Pills content -->
+        </div>
+     
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- toast -->
+<div
+  class="toast fade mx-auto"
+  id="basic-success-example"
+  role="alert"
+  aria-live="assertive"
+  aria-atomic="true"
+  data-mdb-autohide="true"
+  data-mdb-delay="2000"
+  data-mdb-position="top-right"
+  data-mdb-append-to-body="true"
+  data-mdb-stacking="true"
+  data-mdb-width="350px"
+  data-mdb-color="success"
+>
+  <div class="toast-header text-white">
+    <strong class="me-auto">Indonesian Babywearers</strong>
+    <small>11 mins ago</small>
+    <button type="button" class="btn-close btn-close-white" data-mdb-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body text-white">Selamat datang <span id="spanNama"></span></div>
+</div>
+  <!-- toast -->
+
+  <!-- End your project here-->
+
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="plugins/js/cookie.min.js"></script>
+  
+  <!-- Custom scripts -->
+  <script type="text/javascript">
+                    function checkLoginState() {
+                    FB.getLoginStatus(function(response) {
+                      statusChangeCallback(response);
+                    });
+                  }
+                  function statusChangeCallback(response) {
+                    if (response.status === 'connected') {
+    // The user is logged in and has authenticated your
+    // app, and response.authResponse supplies
+    // the user's ID, a valid access token, a signed
+    // request, and the time the access token 
+    // and signed request each expire.
+    var uid = response.authResponse.userID;
+    var accessToken = response.authResponse.accessToken;
+    //todo: insert ke cookie dia udah login 
+    FB.api('/me', function(response) {
+       console.log('Good to see you, ' + response.name + '.');
+       document.getElementById('spanNama').innerText=response.name;
+       let basicInstance = mdb.Toast.getInstance(document.getElementById('basic-success-example'));
+       basicInstance.show();
+       $('.showNama').text(response.name )
+       Cookie.set('fbid', response.userID, {expires: 30});
+       Cookie.set('nama', response.name, {expires: 30});
+       location.reload();
+     });
+  } else if (response.status === 'not_authorized') {
+    // The user hasn't authorized your application.  They
+    // must click the Login button, or you must call FB.login
+    // in response to a user gesture, to launch a login dialog.
+          FB.login(function(response) {
+          if (response.authResponse) {
+          console.log('Welcome!  Fetching your information.... ');
+          FB.api('/me', function(response) {
+            console.log('Good to see you, ' + response.name + '.');
+            
+            //todo: insert ke cookie dia udah login 
+            Cookie.set('fbid', response.userID, {expires: 30})
+            Cookie.set('nama', response.name, {expires: 30})
+          });
+          } else {
+          Cookie.set('nama', '', {expires: 30})
+          console.log('User cancelled login or did not fully authorize.');
+          }
+      });
+  } else {
+    // The user isn't logged in to Facebook. You can launch a
+    // login dialog with a user gesture, but the user may have
+    // to log in to Facebook before authorizing your application.
+    //todo : alert dia belum login facebook
+  }
+
+                  }
+
+                  function loadAwal(){
+                    $('.showNama').text(Cookie.get('nama') );
+                    if(Cookie.get('nama')!=''){
+                      document.getElementById('spanNama').innerText=Cookie.get('nama');
+                      let basicInstance = mdb.Toast.getInstance(document.getElementById('basic-success-example'));
+                      basicInstance.show();
+
+                    }
+
+                  }
+  </script>
+</body>
+
+</html>
