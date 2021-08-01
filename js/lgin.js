@@ -163,7 +163,7 @@ Cookie.set('isconfirmed', false, { expires: 30 });
 console.log("test 2")
 $.getJSON('konfirmlogin.ashx', function (data) {
        if (data.status=='200'  ){
-         console.log("test 3")
+         
          var nama;
          nama= data.row0.nama;
          $('.showNama').text( nama);
@@ -174,10 +174,17 @@ $.getJSON('konfirmlogin.ashx', function (data) {
          Cookie.set('email', data.row0.email, { expires: 30 });
          Cookie.set('wa', data.row0.wa, { expires: 30 });
          Cookie.set('id', data.row0.id, { expires: 30 });
-         Cookie.set('islogin', false, { expires: 30 });
-         Cookie.set('isconfirmed', false, { expires: 30 });
-         window.location.href = "http://kelasibw.com/konfirmasi.html";
-       }else {console.log("test 4")
+        
+         Cookie.set('isconfirmed', data.row0.isconfirmed, { expires: 30 });
+         if (data.row0.isconfirmed =='true') {
+            Cookie.set('islogin', true, { expires: 30 });
+            location.reload();
+          } else{
+            Cookie.set('islogin', false, { expires: 30 });
+            window.location.href = "http://kelasibw.com/konfirmasi.html";
+          }
+
+       }else {
            document.getElementById('spanNama').innerText = "Anda belum terdaftar";
            let basicInstance = mdb.Toast.getInstance(document.getElementById('basic-success-example'));
            basicInstance.show(); 
