@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design Bootstrap</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="../img/mdb-favicon.ico" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="../../css/mdb.min.css">
+  <!-- Ecommerce styles -->
+  <link rel="stylesheet" href="../../css/mdb.ecommerce.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="../../css/style.css">
+  <!-- Your custom styles (optional) -->
+  <style>
+    @media (max-width: 450px) {
+      .carousel .carousel-inner .carousel-item .view img {
+        height: 50vh;
+        width: auto !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+    }
+  </style>
+</head>
+
+<body class="skin-light">
+
+  <!-- Main Navigation -->
+  <header>
+
+    <!-- Modal Contact -->
+    <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header py-4">
+            <h5 class="modal-title mx-auto">Write to us</h5>
+            <button type="button" class="close p-0 m-0" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body mx-3">
+            <div class="md-form md-outline">
+              <i class="fas fa-user prefix"></i>
+              <input type="text" id="contactForm-name1" class="form-control">
+              <label for="contactForm-name1">Your name</label>
+            </div>
+            <div class="md-form md-outline">
+              <i class="fas fa-envelope prefix"></i>
+              <input type="email" id="contactForm-email1" class="form-control">
+              <label for="contactForm-email1">Your email</label>
+            </div>
+            <div class="md-form md-outline">
+              <i class="fas fa-tag prefix"></i>
+              <input type="text" id="contact321" class="form-control">
+              <label for="contact321">Subject</label>
+            </div>
+            <div class="md-form md-outline">
+              <i class="fas fa-pencil-alt prefix"></i>
+              <textarea type="text" id="contact81" class="md-textarea form-control" rows="4"></textarea>
+              <label for="contact81">Your message</label>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center py-4">
+            <button class="btn btn-primary">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Contact -->
+
+    <!-- Modal Login / Register -->
+    <div class="modal fade show" id="modalLoginRegister" tabindex="-1" role="dialog" aria-modal="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+
+            <!-- Pills -->
+            <ul class="nav md-pills nav-justified pills-primary">
+              <li class="nav-item">
+                <a class="nav-link border border-primary border-rounded active show" data-toggle="tab"
+                  href="#modalLoginRegister-login" role="tab" aria-selected="true">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link border border-primary border-rounded" data-toggle="tab"
+                  href="#modalLoginRegister-register" role="tab" aria-selected="false">Register</a>
+              </li>
+            </ul>
+            <!-- Pills -->
+
+            <!-- Content -->
+            <div class="tab-content py-0">
+
+              <!-- First panel -->
+              <div class="tab-pane fade in show active" id="modalLoginRegister-login" role="tabpanel">
+
+                <!-- Login form -->
+                <form id="formLoginRegister-login" class="pt-2" action="login" method="post">
+
+                  <div class="md-form md-outline">
+                    <i class="fas fa-envelope prefix"></i>
+                    <input type="email" id="formLoginRegister-email" class="form-control">
+                    <label data-error="wrong" data-success="right" for="formLoginRegister-email">Your email</label>
+                  </div>
+                  <div class="md-form md-outline">
+                    <i class="fas fa-lock prefix"></i>
+                    <input type="password" id="formLoginRegiser-password" class="form-control">
+                    <label data-error="wrong" data-success="right" for="formLoginRegiser-password">Your password</label>
+                  </div>
+
+                  <div class="text-center mt-4 pt-3">
+                    <button type="button" class="btn btn-outline-primary mr-1 mb-2 waves-effect waves-light">Forgot password?</button>
+                    <button type="button" class="btn btn-primary mb-2">Login</button>
+                  </div>
+
+                </form>
+                <!-- Login form -->
+
+              </div>
+              <!-- First panel -->
+
+              <!-- Second panel -->
+              <div class="tab-pane fade" id="modalLoginRegister-register" role="tabpanel">
+
+                <!-- Register form -->
+                <form id="formLoginRegister-register" class="pt-2" action="register" method="post">
+
+                  <div class="md-form md-outline">
+                    <i class="fas fa-user prefix"></i>
+                    <input type="text" id="formLoginRegister-name" class="form-control">
+                    <label data-error="wrong" data-success="right" for="formLoginRegister-name">Your name</label>
+                  </div>
+                  <div class="md-form md-outline">
+                    <i class="fas fa-pencil-alt prefix"></i>
+                    <input type="text" id="formLoginRegister-username" class="form-control">
+                    <label data-error="wrong" data-success="right" for="formLoginRegister-username">Your username</label>
+                  </div>
+                  <div class="md-form md-outline">
+                    <i class="fas fa-envelope prefix"></i>
+                    <input type="email" id="formLoginRegister-email-example" class="form-control">
+                    <label data-error="wrong" data-success="right" for="formLoginRegister-email-example">Your email</label>
+                  </div>
+                  <div class="md-form md-outline">
+                    <i class="fas fa-lock prefix"></i>
+                    <input type="password" id="formLoginRegister-password-example" class="form-control">
+                    <label data-error="wrong" data-success="right" for="formLoginRegister-password-example">Your password</label>
+                  </div>
+                  <div class="md-form md-outline">
+                    <i class="fas fa-key prefix"></i>
+                    <input type="password" id="formLoginRegister-password-repeat" class="form-control">
+                    <label data-error="wrong" data-success="right" for="formLoginRegister-password-repeat">Repeat password</label>
+                  </div>
+
+                  <div class="form-check mt-4 mb-3 pl-0 text-left">
+                    <input type="checkbox" class="form-check-input filled-in" id="formLoginRegister-newsletter" name="newsletter">
+                    <label class="form-check-label small grey-text" for="formLoginRegister-newsletter">
+                      I agree to sign up for account notifications and newsletter
+                    </label>
+                  </div>
+
+                  <div class="text-center">
+                    <p class="small grey-text mb-4">Lorem ipsum dolor sit amet <a target="_blank" href="#!">Privacy Policy</a>.</p>
+                    <button type="button" class="btn btn-primary my-2">Sign up</button>
+                  </div>
+
+                </form>
+                <!-- Register form -->
+
+              </div>
+              <!-- Second panel -->
+
+            </div>
+            <!-- Content -->
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-primary waves-effect waves-light" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Login / Register -->
+
+    <!-- Modal Login / Register -->
+    <div class="modal fade show" id="modalLoginRegister2" tabindex="-1" role="dialog" aria-modal="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+
+            <!-- Pills -->
+            <ul class="nav md-pills nav-justified pills-primary">
+              <li class="nav-item">
+                <a class="nav-link border border-primary border-rounded" data-toggle="tab"
+                  href="#modalLoginRegister-login2" role="tab" aria-selected="true">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link border border-primary border-rounded active show" data-toggle="tab"
+                  href="#modalLoginRegister-register2" role="tab" aria-selected="false">Register</a>
+              </li>
+            </ul>
+            <!-- Pills -->
+
+            <!-- Content -->
+            <div class="tab-content py-0">
+
+              <!-- First panel -->
+              <div class="tab-pane fade" id="modalLoginRegister-login2" role="tabpanel">
+
+                <!-- Login form -->
+                <form id="formLoginRegister-login2" class="pt-2" action="login" method="post">
+
+                  <div class="md-form md-outline">
+                    <i class="fas fa-envelope prefix"></i>
+                    <input type="email" id="formLoginRegister-email2" class="form-control">
+                    <label data-error="wrong" data-success="right" for="formLoginRegister-email2">Your email</label>
+                  </div>
+                  <div class="md-form md-outline">
+                    <i class="fas fa-lock prefix"></i>
+                    <input type="password" id="formLoginRegiser-password2" class="form-control">
+                    <label data-error="wrong" data-success="right" for="formLoginRegiser-password2">Your password</label>
+                  </div>
+
+                  <div class="text-center mt-4 pt-3">
+                    <button type="button" class="btn btn-outline-primary mr-1 mb-2 waves-effect waves-light">Forgot password?</button>
+                    <button type="button" class="btn btn-primary mb-2">Login</button>
+                  </div>
+
+                </form>
+                <!-- Login form -->
+
+              </div>
+              <!-- First panel -->
+
+              <!-- Second panel -->
+              <div class="tab-pane fade in show active" id="modalLoginRegister-register2" role="tabpanel">
+
+                <!-- Register form -->
+                <form id="formLoginRegister-register2" class="pt-2" action="register" method="post">
+
+                  <div class="md-form md-outline">
+                    <i class="fas fa-user prefix"></i>
+                    <input type="text" id="formLoginRegister-name2" class="form-control">
+                    <label data-error="wrong" data-success="right" for="formLoginRegister-name2">Your name</label>
+                  </div>
+                  <div class="md-form md-outline">
+                    <i class="fas fa-pencil-alt prefix"></i>
+                    <input type="text" id="formLoginRegister-username2" class="form-control">
+                    <label data-error="wrong" data-success="right" for="formLoginRegister-username2">Your username</label>
+                  </div>
+                  <div class="md-form md-outline">
+                    <i class="fas fa-envelope prefix"></i>
+                    <input type="email" id="formLoginRegister-email-example2" class="form-control">
+                    <label data-error="wrong" data-success="right" for="formLoginRegister-email-example2">Your email</label>
+                  </div>
+                  <div class="md-form md-outline">
+                    <i class="fas fa-lock prefix"></i>
+                    <input type="password" id="formLoginRegister-password-example2" class="form-control">
+                    <label data-error="wrong" data-success="right" for="formLoginRegister-password-example2">Your password</label>
+                  </div>
+                  <div class="md-form md-outline">
+                    <i class="fas fa-key prefix"></i>
+                    <input type="password" id="formLoginRegister-password-repeat2" class="form-control">
+                    <label data-error="wrong" data-success="right" for="formLoginRegister-password-repeat2">Repeat password</label>
+                  </div>
+
+                  <div class="form-check mt-4 mb-3 pl-0 text-left">
+                    <input type="checkbox" class="form-check-input filled-in" id="formLoginRegister-newsletter2" name="newsletter">
+                    <label class="form-check-label small grey-text" for="formLoginRegister-newsletter2">
+                      I agree to sign up for account notifications and newsletter
+                    </label>
+                  </div>
+
+                  <div class="text-center">
+                    <p class="small grey-text mb-4">Lorem ipsum dolor sit amet <a target="_blank" href="#!">Privacy Policy</a>.</p>
+                    <button type="button" class="btn btn-primary my-2">Sign up</button>
+                  </div>
+
+                </form>
+                <!-- Register form -->
+
+              </div>
+              <!-- Second panel -->
+
+            </div>
+            <!-- Content -->
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-primary waves-effect waves-light" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Login / Register -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top scrolling-navbar">
+      <div class="container-fluid">
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="https://mdbecommerce.com/">
+          <strong><span class="text-success">Eco</span><span>Love</span><span class="text-success">.</span></strong>
+        </a>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+          aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+          <!-- Right -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="#!" class="nav-link navbar-link-2 waves-effect">
+                <span class="badge badge-pill badge-danger">3</span>
+                <i class="fas fa-shopping-cart pl-0"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#!" class="nav-link waves-effect">
+                Shop
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#!" class="nav-link waves-effect">
+                Blog
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#!" data-toggle="modal" data-target="#modalContactForm" class="nav-link waves-effect">
+                Contact
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#!" data-toggle="modal" data-target="#modalLoginRegister" class="nav-link waves-effect">
+                Sign in
+              </a>
+            </li>
+            <li class="nav-item pl-2 mb-2 mb-md-0">
+              <a href="#!" data-toggle="modal" data-target="#modalLoginRegister2" type="button" class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light">Sign up</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Links -->
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!--Section: Block Content-->
+    <section>
+
+      <!--Carousel Wrapper-->
+      <div id="carousel-example-2" class="carousel slide carousel-fade mt-70" data-ride="carousel">
+        <!--Indicators-->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-2" data-slide-to="1"></li>
+          <li data-target="#carousel-example-2" data-slide-to="2"></li>
+        </ol>
+        <!--/Indicators-->
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <div class="view">
+              <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Eco/img(53)-slide.jpg" alt="First slide">
+              <a href="#!">
+                <div class="mask rgba-black-light">
+                  <div class="carousel-caption">
+                    <h3 class="mb-4">Organic vegetables with delivery straight to your door</h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <!--Mask color-->
+            <div class="view">
+              <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Eco/img(54)-slide.jpg"
+                alt="Second slide">
+              <a href="#!">
+                <div class="mask rgba-black-light">
+                  <div class="carousel-caption">
+                    <h3 class="mb-4">A wide selection of nuts, groats, pasta</h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <!--Mask color-->
+            <div class="view">
+              <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Eco/img(22)-slide.jpg"
+                alt="Third slide">
+              <a href="#!">
+                <div class="mask rgba-black-light">
+                  <div class="carousel-caption">
+                    <h3 class="mb-4">Simple and healthy recipes from seasonal products</h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--/Slides-->
+        <!--Controls-->
+        <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+        <!--/Controls-->
+      </div>
+      <!--/Carousel Wrapper-->
+
+    </section>
+    <!--Section: Block Content-->
+
+  </header>
+  <!-- Main Navigation -->
+
+  <!-- Main layout -->
+  <main>
+
+    <div class="container">
+
+      <!--Section: Block Content-->
+      <section>
+
+        <h3 class="text-center mt-5">Categories</h3>
+
+        <!-- Grid row -->
+        <div class="row mt-5">
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-4 mb-4">
+
+            <!-- Card -->
+            <div class="">
+
+              <div class="view zoom z-depth-2 rounded">
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Eco/img(10).jpg" alt="Sample">
+                <a href="#!" class="text-white">
+                  <div class="mask rgba-stylish-slight">
+                    <div class="d-flex align-items-end h-100 p-3">
+                      <h5 class="text-white mb-0">Vegetables</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-4 mb-4">
+
+            <!-- Card -->
+            <div class="">
+
+              <div class="view zoom z-depth-2 rounded">
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Eco/img(61).jpg" alt="Sample">
+                <a href="#!" class="text-white">
+                  <div class="mask rgba-stylish-slight">
+                    <div class="d-flex align-items-end h-100 p-3">
+                      <h5 class="text-white mb-0">Fruits</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-4 mb-4">
+
+            <!-- Card -->
+            <div class="">
+
+              <div class="view zoom z-depth-2 rounded">
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Eco/img(59).jpg" alt="Sample">
+                <a href="#!" class="text-white">
+                  <div class="mask rgba-stylish-slight">
+                    <div class="d-flex align-items-end h-100 p-3">
+                      <h5 class="text-white mb-0">Herbs</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-4 mb-4">
+
+            <!-- Card -->
+            <div class="">
+
+              <div class="view zoom z-depth-2 rounded">
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Eco/img(62).jpg" alt="Sample">
+                <a href="#!" class="text-white">
+                  <div class="mask rgba-stylish-slight">
+                    <div class="d-flex align-items-end h-100 p-3">
+                      <h5 class="text-white mb-0">Bread</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-4 mb-4">
+
+            <!-- Card -->
+            <div class="">
+
+              <div class="view zoom z-depth-2 rounded">
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Eco/img(63).jpg" alt="Sample">
+                <a href="#!" class="text-white">
+                  <div class="mask rgba-stylish-slight">
+                    <div class="d-flex align-items-end h-100 p-3">
+                      <h5 class="text-white mb-0">Pasta</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-4 mb-4">
+
+            <!-- Card -->
+            <div class="">
+
+              <div class="view zoom z-depth-2 rounded">
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Eco/img(64).jpg" alt="Sample">
+                <a href="#!" class="text-white">
+                  <div class="mask rgba-stylish-slight">
+                    <div class="d-flex align-items-end h-100 p-3">
+                      <h5 class="text-white mb-0">Nuts</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-4 mb-4">
+
+            <!-- Card -->
+            <div class="">
+
+              <div class="view zoom z-depth-2 rounded">
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Eco/img(66).jpg" alt="Sample">
+                <a href="#!" class="text-white">
+                  <div class="mask rgba-stylish-slight">
+                    <div class="d-flex align-items-end h-100 p-3">
+                      <h5 class="text-white mb-0">Legumes</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-4 mb-4">
+
+            <!-- Card -->
+            <div class="">
+
+              <div class="view zoom z-depth-2 rounded">
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Eco/img(70).jpg" alt="Sample">
+                <a href="#!" class="text-white">
+                  <div class="mask rgba-stylish-slight">
+                    <div class="d-flex align-items-end h-100 p-3">
+                      <h5 class="text-white mb-0">Rice</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-4 mb-4">
+
+            <!-- Card -->
+            <div class="">
+
+              <div class="view zoom z-depth-2 rounded">
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Eco/img(71).jpg" alt="Sample">
+                <a href="#!" class="text-white">
+                  <div class="mask rgba-stylish-slight">
+                    <div class="d-flex align-items-end h-100 p-3">
+                      <h5 class="text-white mb-0">Spices</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-4 mb-4">
+
+            <!-- Card -->
+            <div class="">
+
+              <div class="view zoom z-depth-2 rounded">
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Eco/img(72).jpg" alt="Sample">
+                <a href="#!" class="text-white">
+                  <div class="mask rgba-stylish-slight">
+                    <div class="d-flex align-items-end h-100 p-3">
+                      <h5 class="text-white mb-0">Coffee</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-4 mb-4">
+
+            <!-- Card -->
+            <div class="">
+
+              <div class="view zoom z-depth-2 rounded">
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Eco/img(73).jpg" alt="Sample">
+                <a href="#!" class="text-white">
+                  <div class="mask rgba-stylish-slight">
+                    <div class="d-flex align-items-end h-100 p-3">
+                      <h5 class="text-white mb-0">Tea</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-4 mb-4">
+
+            <!-- Card -->
+            <div class="">
+
+              <div class="view zoom z-depth-2 rounded">
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Eco/img(75).jpg" alt="Sample">
+                <a href="#!" class="text-white">
+                  <div class="mask rgba-stylish-slight">
+                    <div class="d-flex align-items-end h-100 p-3">
+                      <h5 class="text-white mb-0">Dry fruits</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+      </section>
+      <!--Section: Block Content-->
+
+      <!--Section: Block Content-->
+      <section>
+
+        <h3 class="text-center mt-4 pt-5">Bestsellers</h3>
+
+        <!-- Grid row -->
+        <div class="row mt-5">
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-3 mb-4">
+
+            <!-- Card -->
+            <div class="">
+
+              <div class="view zoom z-depth-2 rounded">
+                <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Eco/img(40).jpg" alt="Sample">
+                <a href="#!">
+                  <div class="mask"></div>
+                </a>
+              </div>
+
+              <div class="text-center pt-4">
+
+                <h5 class="mb-0">Organic green asparagus</h5>
+                <h5>(bunch)</h5>
+                <h6 class="mb-3">$ 6.99</h6>
+                <button type="button" class="btn btn-primary btn-sm mr-1"><i class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
+                <button type="button" class="btn btn-light btn-sm"><i class="fas fa-info-circle pr-2"></i>Details</button>
+
+              </div>
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-3 mb-4">
+
+            <!-- Card -->
+            <div class="">
+
+              <div class="view zoom z-depth-2 rounded">
+                <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Eco/img(47).jpg" alt="Sample">
+                <a href="#!">
+                  <div class="mask"></div>
+                </a>
+              </div>
+
+              <div class="text-center pt-4">
+
+                <h5 class="mb-0">Organic red pepper</h5>
+                <h5>(1kg)</h5>
+                <h6 class="mb-3">$ 9.99</h6>
+                <button type="button" class="btn btn-primary btn-sm mr-1"><i class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
+                <button type="button" class="btn btn-light btn-sm"><i class="fas fa-info-circle pr-2"></i>Details</button>
+
+              </div>
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-3 mb-4">
+
+            <!-- Card -->
+            <div class="">
+
+              <div class="view zoom z-depth-2 rounded">
+                <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Eco/img(14).jpg" alt="Sample">
+                <a href="#!">
+                  <div class="mask"></div>
+                </a>
+              </div>
+
+              <div class="text-center pt-4">
+
+                <h5 class="mb-0">Organic Hass avocado</h5>
+                <h5>(piece)</h5>
+                <h6 class="mb-3">$ 4.99</h6>
+                <button type="button" class="btn btn-primary btn-sm mr-1"><i class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
+                <button type="button" class="btn btn-light btn-sm"><i class="fas fa-info-circle pr-2"></i>Details</button>
+
+              </div>
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-3 mb-4">
+
+            <!-- Card -->
+            <div class="">
+
+              <div class="view zoom z-depth-2 rounded">
+                <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Eco/img(28).jpg" alt="Sample">
+                <a href="#!">
+                  <div class="mask"></div>
+                </a>
+              </div>
+
+              <div class="text-center pt-4">
+
+                <h5 class="mb-0">Organic peaches</h5>
+                <h5>(1kg)</h5>
+                <h6 class="mb-3">$ 5.99</h6>
+                <button type="button" class="btn btn-primary btn-sm mr-1"><i class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
+                <button type="button" class="btn btn-light btn-sm"><i class="fas fa-info-circle pr-2"></i>Details</button>
+
+              </div>
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+      </section>
+      <!--Section: Block Content-->
+
+      <!--Section: Block Content-->
+      <section>
+
+        <h3 class="text-center mt-4 pt-5">New products</h3>
+
+        <!-- Grid row -->
+        <div class="row mt-5">
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-3 mb-4">
+
+            <!-- Card -->
+            <div class="">
+
+              <div class="view zoom z-depth-2 rounded">
+                <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Eco/img(6).jpg" alt="Sample">
+                <a href="#!">
+                  <div class="mask"></div>
+                </a>
+              </div>
+
+              <div class="text-center pt-4">
+
+                <h5 class="mb-0">Organic lettuce seedlings</h5>
+                <h5>(3 pieces)</h5>
+                <h6 class="mb-3">$ 5.99</h6>
+                <button type="button" class="btn btn-primary btn-sm mr-1"><i class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
+                <button type="button" class="btn btn-light btn-sm"><i class="fas fa-info-circle pr-2"></i>Details</button>
+
+              </div>
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-3 mb-4">
+
+            <!-- Card -->
+            <div class="">
+
+              <div class="view zoom z-depth-2 rounded">
+                <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Eco/img(74).jpg" alt="Sample">
+                <a href="#!">
+                  <div class="mask"></div>
+                </a>
+              </div>
+
+              <div class="text-center pt-4">
+
+                <h5 class="mb-0">Organic Italian olive oil</h5>
+                <h5>(500 ml)</h5>
+                <h6 class="mb-3">$ 8.99</h6>
+                <button type="button" class="btn btn-primary btn-sm mr-1"><i class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
+                <button type="button" class="btn btn-light btn-sm"><i class="fas fa-info-circle pr-2"></i>Details</button>
+
+              </div>
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-3 mb-4">
+
+            <!-- Card -->
+            <div class="">
+
+              <div class="view zoom z-depth-2 rounded">
+                <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Eco/img(41).jpg" alt="Sample">
+                <a href="#!">
+                  <div class="mask"></div>
+                </a>
+              </div>
+
+              <div class="text-center pt-4">
+
+                <h5 class="mb-0">Organic Polish strawberries</h5>
+                <h5>(500 g)</h5>
+                <h6 class="mb-3">$ 7.99</h6>
+                <button type="button" class="btn btn-primary btn-sm mr-1"><i class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
+                <button type="button" class="btn btn-light btn-sm"><i class="fas fa-info-circle pr-2"></i>Details</button>
+
+              </div>
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-3 mb-4">
+
+            <!-- Card -->
+            <div class="">
+
+              <div class="view zoom z-depth-2 rounded">
+                <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Eco/img(76).jpg" alt="Sample">
+                <a href="#!">
+                  <div class="mask"></div>
+                </a>
+              </div>
+
+              <div class="text-center pt-4">
+
+                <h5 class="mb-0">Organic Kenyan arabica</h5>
+                <h5>(500 g)</h5>
+                <h6 class="mb-3">$ 12.99</h6>
+                <button type="button" class="btn btn-primary btn-sm mr-1"><i class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
+                <button type="button" class="btn btn-light btn-sm"><i class="fas fa-info-circle pr-2"></i>Details</button>
+
+              </div>
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+      </section>
+      <!--Section: Block Content-->
+
+      <!--Section: Content-->
+      <section>
+
+        <div class="row d-flex justify-content-center text-center mt-3 mt-md-5 mb-4 pt-5">
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-3 pb-1 pb-md-0">
+            <i class="fas fa-tree fa-3x text-success mb-4"></i>
+            <h5>1 order </h5>
+            <h5>1 planted tree</h5>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-3 pb-1 pb-md-0">
+            <i class="fas fa-shipping-fast fa-3x text-dark mb-4"></i>
+            <h5>Free shipping from</h5>
+            <h5>from $ 100</h5>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-3 pb-1 pb-md-0">
+            <i class="fas fa-box-open fa-3x text-dark mb-4"></i>
+            <h5>Shipments</h5>
+            <h5>withour plastic</h5>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-3">
+            <i class="fas fa-hand-holding-usd fa-3x text-dark mb-4"></i>
+            <h5>Permanent discounts</h5>
+            <h5>for points</h5>
+          </div>
+        </div>
+
+      </section>
+      <!--Section: Content-->
+
+    </div>
+
+  </main>
+  <!-- Main layout -->
+
+  <!-- Footer -->
+  <footer class="page-footer font-small elegant-color">
+
+    <div class="color-primary">
+      <div class="container">
+
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+            <h6 class="mb-0">Get connected with us on social networks!</h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fab fa-facebook-f white-text mr-4"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fab fa-twitter white-text mr-4"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fab fa-instagram white-text"> </i>
+            </a>
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row-->
+
+      </div>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left pt-4 pt-md-5">
+
+      <!-- Grid row -->
+      <div class="row mt-1 mt-md-0 mb-4 mb-md-0">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto mt-3 mt-md-0 mb-0 mb-md-4">
+
+          <!-- Links -->
+          <h5>About us</h5>
+          <hr class="color-primary mb-4 mt-0 d-inline-block mx-auto w-60">
+
+          <ul class="list-unstyled foot-desc">
+            <li class="mb-2">
+              <a href="#!">About EcoLove</a>
+            </li>
+            <li class="mb-2">
+              <a href="#!">1 order = 1 planted tree</a>
+            </li>
+            <li class="mb-2">
+              <a href="#!">100% vegan</a>
+            </li>
+            <li class="mb-2">
+              <a href="#!">Without palm oil</a>
+            </li>
+            <li class="mb-2">
+              <a href="#!">Naturally</a>
+            </li>
+            <li class="mb-2">
+              <a href="#!">Ecologically</a>
+            </li>
+            <li class="mb-2">
+              <a href="#!">Corporate social responsibility</a>
+            </li>
+            <li class="mb-2">
+              <a href="#!">Our brands</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto mt-3 mt-md-0 mb-0 mb-md-4">
+
+          <!-- Links -->
+          <h5>Your account</h5>
+          <hr class="color-primary mb-4 mt-0 d-inline-block mx-auto w-60">
+
+          <ul class="list-unstyled foot-desc">
+            <li class="mb-2">
+              <a href="#!">Your orders</a>
+            </li>
+            <li class="mb-2">
+              <a href="#!">Loyality program</a>
+            </li>
+            <li class="mb-2">
+              <a href="#!">Account settings</a>
+            </li>
+            <li class="mb-2">
+              <a href="#!">Store</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto mt-3 mt-md-0 mb-0 mb-md-4">
+
+          <!-- Links -->
+          <h5>Payments and delivery</h5>
+          <hr class="color-primary mb-4 mt-0 d-inline-block mx-auto w-60">
+
+          <ul class="list-unstyled foot-desc">
+            <li class="mb-2">
+              <a href="#!">Free shipping</a>
+            </li>
+            <li class="mb-2">
+              <a href="#!">Zero waste shipments</a>
+            </li>
+            <li class="mb-2">
+              <a href="#!">Payments</a>
+            </li>
+            <li class="mb-2">
+              <a href="#!">Shipping and returns</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto mt-3 mt-md-0 mb-0 mb-md-4">
+
+          <!-- Links -->
+          <h5>Contacts</h5>
+          <hr class="color-primary mb-4 mt-0 d-inline-block mx-auto w-60">
+
+          <ul class="list-unstyled foot-desc">
+            <li class="mb-2">
+              <a href="#!">Contact & Cooperation</a>
+            </li>
+            <li class="mb-2">
+              <a href="#!">Terms of use</a>
+            </li>
+            <li class="mb-2">
+              <a href="#!">Payments</a>
+            </li>
+            <li class="mb-2">
+              <a href="#!">Privacy policy</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+  <!-- SCRIPTS -->
+  <!-- jQuery -->
+  <script type="text/javascript" src="../../js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="../../js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="../../js/mdb.min.js"></script>
+  <!-- MDB eCommerce -->
+  <script type="text/javascript" src="../../js/mdb.ecommerce.min.js"></script>
+</body>
+
+</html>

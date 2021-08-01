@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ambilData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="skrip" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ambilDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ambilDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="skrip" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ambilString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="skrip" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ambilStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ambilStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ambilStringArray">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="skrip" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ambilStringArrayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ambilStringArrayResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ambilInteger">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="skrip" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ambilIntegerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ambilIntegerResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertBLOB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="skrip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="namaParam4Blob" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="blob" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertBLOBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertBLOBResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertCLOB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="skrip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="namaParam4Blob" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clob" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertCLOBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertCLOBResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ambilImage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ambilImageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ambilImageResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ambilDataSoapIn">
+    <wsdl:part name="parameters" element="tns:ambilData" />
+  </wsdl:message>
+  <wsdl:message name="ambilDataSoapOut">
+    <wsdl:part name="parameters" element="tns:ambilDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateDataSoapIn">
+    <wsdl:part name="parameters" element="tns:updateData" />
+  </wsdl:message>
+  <wsdl:message name="updateDataSoapOut">
+    <wsdl:part name="parameters" element="tns:updateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ambilStringSoapIn">
+    <wsdl:part name="parameters" element="tns:ambilString" />
+  </wsdl:message>
+  <wsdl:message name="ambilStringSoapOut">
+    <wsdl:part name="parameters" element="tns:ambilStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="ambilStringArraySoapIn">
+    <wsdl:part name="parameters" element="tns:ambilStringArray" />
+  </wsdl:message>
+  <wsdl:message name="ambilStringArraySoapOut">
+    <wsdl:part name="parameters" element="tns:ambilStringArrayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ambilIntegerSoapIn">
+    <wsdl:part name="parameters" element="tns:ambilInteger" />
+  </wsdl:message>
+  <wsdl:message name="ambilIntegerSoapOut">
+    <wsdl:part name="parameters" element="tns:ambilIntegerResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertBLOBSoapIn">
+    <wsdl:part name="parameters" element="tns:insertBLOB" />
+  </wsdl:message>
+  <wsdl:message name="insertBLOBSoapOut">
+    <wsdl:part name="parameters" element="tns:insertBLOBResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertCLOBSoapIn">
+    <wsdl:part name="parameters" element="tns:insertCLOB" />
+  </wsdl:message>
+  <wsdl:message name="insertCLOBSoapOut">
+    <wsdl:part name="parameters" element="tns:insertCLOBResponse" />
+  </wsdl:message>
+  <wsdl:message name="ambilImageSoapIn">
+    <wsdl:part name="parameters" element="tns:ambilImage" />
+  </wsdl:message>
+  <wsdl:message name="ambilImageSoapOut">
+    <wsdl:part name="parameters" element="tns:ambilImageResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ambilData">
+      <wsdl:input message="tns:ambilDataSoapIn" />
+      <wsdl:output message="tns:ambilDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateData">
+      <wsdl:input message="tns:updateDataSoapIn" />
+      <wsdl:output message="tns:updateDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ambilString">
+      <wsdl:input message="tns:ambilStringSoapIn" />
+      <wsdl:output message="tns:ambilStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ambilStringArray">
+      <wsdl:input message="tns:ambilStringArraySoapIn" />
+      <wsdl:output message="tns:ambilStringArraySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ambilInteger">
+      <wsdl:input message="tns:ambilIntegerSoapIn" />
+      <wsdl:output message="tns:ambilIntegerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertBLOB">
+      <wsdl:input message="tns:insertBLOBSoapIn" />
+      <wsdl:output message="tns:insertBLOBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertCLOB">
+      <wsdl:input message="tns:insertCLOBSoapIn" />
+      <wsdl:output message="tns:insertCLOBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ambilImage">
+      <wsdl:input message="tns:ambilImageSoapIn" />
+      <wsdl:output message="tns:ambilImageSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSoap" type="tns:WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ambilData">
+      <soap:operation soapAction="http://tempuri.org/ambilData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateData">
+      <soap:operation soapAction="http://tempuri.org/updateData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ambilString">
+      <soap:operation soapAction="http://tempuri.org/ambilString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ambilStringArray">
+      <soap:operation soapAction="http://tempuri.org/ambilStringArray" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ambilInteger">
+      <soap:operation soapAction="http://tempuri.org/ambilInteger" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertBLOB">
+      <soap:operation soapAction="http://tempuri.org/insertBLOB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertCLOB">
+      <soap:operation soapAction="http://tempuri.org/insertCLOB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ambilImage">
+      <soap:operation soapAction="http://tempuri.org/ambilImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceSoap12" type="tns:WebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ambilData">
+      <soap12:operation soapAction="http://tempuri.org/ambilData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateData">
+      <soap12:operation soapAction="http://tempuri.org/updateData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ambilString">
+      <soap12:operation soapAction="http://tempuri.org/ambilString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ambilStringArray">
+      <soap12:operation soapAction="http://tempuri.org/ambilStringArray" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ambilInteger">
+      <soap12:operation soapAction="http://tempuri.org/ambilInteger" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertBLOB">
+      <soap12:operation soapAction="http://tempuri.org/insertBLOB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertCLOB">
+      <soap12:operation soapAction="http://tempuri.org/insertCLOB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ambilImage">
+      <soap12:operation soapAction="http://tempuri.org/ambilImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService">
+    <wsdl:port name="WebServiceSoap" binding="tns:WebServiceSoap">
+      <soap:address location="https://indonesianbabywearers.com/webservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceSoap12" binding="tns:WebServiceSoap12">
+      <soap12:address location="https://indonesianbabywearers.com/webservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

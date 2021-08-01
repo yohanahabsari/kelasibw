@@ -1,0 +1,71 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+joanelibweb
+</name>
+</assembly>
+<members>
+<member name="T:My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:joanelibweb.buttonHandler">
+ <summary>
+ This class provides an image handler as an HTTP handler.
+ </summary>
+</member>
+<member name="M:joanelibweb.buttonHandler.makeButton(System.String)">
+***********************************************************************
+ <summary>
+ This routine creates a button with the passed text.
+ </summary>
+
+ <param name="buttonText">
+ Set to the text to place on the button
+ </param>
+
+ <returns>Bitmap of button that was created</returns>
+</member>
+<member name="T:joanelibweb.fileDownloadHandler">
+ <summary>
+ This class provides a file download handler as an HTTP handler.
+ </summary>
+</member>
+<member name="P:joanelibweb.fileDownloadHandler.IsReusable">
+***********************************************************************
+ <summary>
+ This property defines whether another HTTP handler can reuse this
+ instance of the handler.
+ </summary>
+
+ <returns>False</returns>
+ <remarks>
+ False is always returned since this handler is synchronous and is
+ not pooled.
+ </remarks>
+</member>
+<member name="M:joanelibweb.fileDownloadHandler.ProcessRequest(System.Web.HttpContext)">
+***********************************************************************
+ <summary>
+ This routine provides the processing for the http request. It is
+	responsible for reading the file from the local filesystem and
+ writing it to the response object.
+ </summary>
+
+ <param name="context">Set to the current HttpContext</param>
+</member>
+</members>
+</doc>

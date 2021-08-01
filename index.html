@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>Material Design for Bootstrap</title>
+  <title>Kelas IBW - belajar bersama</title>
   <!-- MDB icon -->
   <link rel="icon" href="img/favicons/favicon.ico" type="image/x-icon" />
   <!-- Font Awesome -->
@@ -15,9 +15,11 @@
   <!-- MDB -->
   <link rel="stylesheet" href="css/mdb.min.css" />
   <link rel="stylesheet" href="plugins/css/cookie.min.css" />
+  <link rel="stylesheet" href="plugins/css/onboarding.min.css" />
 </head>
 
 <body onload="loadAwal();">
+
   <!-- Facebook login -->
   <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v11.0&appId=81849056149&autoLogAppEvents=1" nonce="SAaqz2HH"></script>
@@ -26,7 +28,7 @@
 <!--navbar-->
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar  sticky-top navbar-expand-lg navbar-light bg-light">
   <!-- Container wrapper -->
   <div class="container-fluid">
     <!-- Toggle button -->
@@ -56,7 +58,7 @@
       <!-- Left links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#">Kelas</a>
+          <a class="nav-link" href="kelas.html">Kelas</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Dashboard</a>
@@ -102,27 +104,36 @@
       </ul>
 
       <!-- Avatar -->
-      <a class=" me-3  text-black" href="#"   role="button"
+      <div       data-mdb-step
+      data-mdb-index="1"
+      data-mdb-onboarding-content="Anda harus login untuk mendapatkan poin atau mengakses kelas">
+      <a class=" me-3  text-black" href="#"   role="button" id="navbarNama"
       data-mdb-toggle="dropdown"
       aria-expanded="false" >
         <span class='showNama'></span>
       </a>
-      
 
       <ul
         class="dropdown-menu dropdown-menu-end"
-        aria-labelledby="navbarDropdownMenuLink"
+        aria-labelledby="navbarNama"
       >
         <li>
           <a class="dropdown-item" href="#">My profile</a>
         </li>
         <li>
-          <a class="dropdown-item" href="#">Settings</a>
+          <a class="dropdown-item" href="#">My Poin</a>
         </li>
         <li>
-          <a class="dropdown-item" href="#">Logout</a>
+          <a class="dropdown-item" href="#" id="btnOut" >Logout</a>
         </li>
       </ul>
+      <button type="button" class="btn btn-primary btn-rounded" data-mdb-toggle="modal" data-mdb-target="#exampleModal"  id="btnLogin"    >
+        Login
+      </button>
+    </div>
+
+
+
     </div>
     <!-- Right elements -->
   </div>
@@ -130,7 +141,13 @@
 </nav>
 <!-- Navbar -->
 <!--navbar-->
-
+<section
+class="mb-4 onboarding"
+data-mdb-start-trigger="#global-backdrop-trigger"
+data-mdb-start-event="click"
+data-mdb-backdrop="true"
+data-mdb-backdrop-opacity="0.5"
+>
   <div id="preview" class="preview">
     <div style="display: none;"></div>
     <div>
@@ -185,10 +202,12 @@
                     </h2>
                     <p class="mt-1 pe-lg-5 me-lg-5 lead fw-normal text-muted">Jadikan kegiatan sehari-hari menjadi
                       bermanfaat bagi komunitas dan diri sendiri<br></p>
-                    <div class="buttons"> <a href="#!" type="button" class="btn           btn-primary btn-lg mt-4 me-2"
-                        aria-controls="#picker-editor" draggable="false">Get Started</a> <a href="#!" type="button"
-                        class="btn           btn-link btn-lg mt-4" aria-controls="#picker-editor" draggable="false">Read
-                        more</a> </div>
+                    <div class="buttons"> <a href="#!" type="button" class="btn           btn-primary btn-lg mt-4 me-2"           
+                      data-mdb-step
+                      data-mdb-index="2"
+                      data-mdb-onboarding-content="Anda bisa masuk / pilih kelas yang tersedia di sini."
+                        aria-controls="#picker-editor" draggable="false">Masuk Kelas</a> <a href="#!" type="button" id="global-backdrop-trigger"
+                        class="btn           btn-link btn-lg mt-4" aria-controls="#picker-editor" draggable="false">Pengenalan Halaman Web disini </a> </div>
 <p class="mt-2 pe-lg-5 me-lg-5 lead fw-normal text-muted">Total Poin dikumpulkan : </p>
 <div class="progress" style="height: 20px;">
   <div
@@ -289,6 +308,27 @@
       </div>
       <div style="position: relative;" data-draggable="true" class="" draggable="false">
         <!---->
+                <!---->
+                <section draggable="false" class="container pt-5" data-v-271253ee="">
+                  <section class="">
+                    <div class=" d-block d-md-flex justify-content-between align-items-center text-center text-md-start ">
+                      <div>
+                        <h2 class="fw-bold mb-3"> <span>Ready to start?</span> <br><span class="text-primary">Register for free
+                            today.</span> </h2>
+                      </div>
+                      <div> <a type="button" class="btn              btn-link btn-rounded" data-ripple-color="primary"
+                          aria-controls="#picker-editor" draggable="false">Learn more</a> 
+                          <button type="button" class="btn btn-primary btn-rounded" data-mdb-toggle="modal" data-mdb-target="#exampleModal"                       
+                          data-mdb-step
+                          data-mdb-index="3"
+                          data-mdb-onboarding-content="Anda bisa mengumpulkan poin lewat berbagi berita klik disini " >
+                            Berbagi Berita
+                          </button>
+                        </div>
+                    </div>
+                  </section>
+                </section>
+                <!---->
         <!---->
         <section draggable="false" class="container pt-5" data-v-271253ee="">
           <section class="position-relative">
@@ -314,7 +354,10 @@
                     <h2 class="fw-bold mb-4">Berbagi tips pengasuhan<br></h2>
                     <p class="mb-4">Setiap orang tua itu spesial, mari simpan momen-momen bersama anak untuk catatan dan
                       review pertumbuhannya di masa depan menjadi anak yang luar biasa<br></p><a type="button"
-                      class="btn btn-outline-white btn-rounded btn-lg ripple-surface" aria-controls="#picker-editor"
+                      class="btn btn-outline-white btn-rounded btn-lg ripple-surface" aria-controls="#picker-editor"                       
+                      data-mdb-step
+                      data-mdb-index="4"
+                      data-mdb-onboarding-content="Untuk memudahkan melihat pertumbuhan anak, Anda bisa klik disini. Dapatkan poin yang bisa ditukar kelas atau merchandise"
                       draggable="false" style="min-width: auto;">Catat momen</a>
                   </div>
                 </div>
@@ -326,33 +369,49 @@
       </div>
       <div style="position: relative;" data-draggable="true" class="" draggable="false">
         <!---->
-        <!---->
-        <section draggable="false" class="container pt-5" data-v-271253ee="">
-          <section class="">
-            <div class=" d-block d-md-flex justify-content-between align-items-center text-center text-md-start ">
-              <div>
-                <h2 class="fw-bold mb-3"> <span>Ready to start?</span> <br><span class="text-primary">Register for free
-                    today.</span> </h2>
-              </div>
-              <div> <a type="button" class="btn              btn-link btn-rounded" data-ripple-color="primary"
-                  aria-controls="#picker-editor" draggable="false">Learn more</a> 
-                  <button type="button" class="btn btn-primary btn-rounded" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-                    Login
-                  </button>
-                </div>
-            </div>
-          </section>
-        </section>
-        <!---->
+
       </div>
-      <footer class="text-center text-white" style="background-color: #caced1;">
+      <footer class="text-center text-white" >
         <!-- Grid container -->
         <div class="container p-4">
           <!-- Section: Iframe -->
+          <section class="mb-4"               
+          data-mdb-step
+          data-mdb-index="5"
+          data-mdb-onboarding-content="Yuk mengenal IBW lewat chanel social media lainnya" >
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+      
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-twitter"></i
+            ></a>
+      
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-google"></i
+            ></a>
+      
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-instagram"></i
+            ></a>
+      
+            <!-- Linkedin -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+      
+          </section>
+          <!-- Section: Social media -->
+
           <section class="">
             <div class="row d-flex justify-content-center">
-              <div class="col-lg-6">
-                <div class="ratio ratio-16x9">
+              <div class="col-lg-6"                      
+>
+                <div class="ratio ratio-16x9" >
                   <iframe
                     class="shadow-1-strong rounded"
                     src="https://www.youtube.com/embed/_lIdQlevFV0"
@@ -372,7 +431,7 @@
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
           © 2020 Copyright:
-          <a class="text-white" style="color:rgb(241, 100, 18);" href="https://ibw.news/">Indonesian Babywearers</a>
+          <a  style="color:rgb(241, 100, 18);" href="https://ibw.news/">Indonesian Babywearers</a>
         </div>
         <!-- Copyright -->
       </footer>
@@ -413,6 +472,7 @@
   scope="public_profile,email" 
   onlogin="checkLoginState();">
 </fb:login-button>
+
                   <button type="button" class="btn btn-primary btn-floating mx-1 d-none">
                     <i class="fab fa-facebook-f"></i>
                   </button>
@@ -434,68 +494,71 @@
 
                 <!-- Email input -->
                 <div class="form-outline mb-4">
-                  <input type="email" id="loginName" class="form-control" />
+                  <input type="text" id="loginUser" class="form-control" />
                   <label class="form-label" for="loginName">Email or whatsapp number (62xxxxxx)</label>
                 </div>
 
                 <!-- Submit button -->
-                <button type="submit" class="btn btn-primary btn-block mb-4">
+                <button type="submit" class="btn btn-primary btn-block mb-4" id="btnLoginEmailWa">
                   Sign in
                 </button>
-
+               
                 <!-- Register buttons -->
                 <div class="text-center">
-                  <p>Not a member? <a href="#!">Register</a></p>
+                  <p  id="result" ></p>
                 </div>
               </form>
             </div>
             <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
-              <form>
-                <div class="text-center mb-3">
-                  <p>Sign up with:</p>
-           
-                  <button type="button"  scope="public_profile,email"  class="btn btn-primary btn-floating mx-1  d-none" onclick="checkLoginState();">
-                    <i class="fab fa-facebook-f"></i>
-                  </button>
+                <form>
+                    <div class="text-center mb-3">
+                        <p>Sign up with:</p>
+
+                        <button type="button" scope="public_profile,email" class="btn btn-primary btn-floating mx-1  d-none" onclick="checkLoginState();">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
 
 
-                  <button type="button" class="btn btn-primary btn-floating mx-1 d-none">
-                    <i class="fab fa-google"></i>
-                  </button>
+                        <button type="button" class="btn btn-primary btn-floating mx-1 d-none">
+                            <i class="fab fa-google"></i>
+                        </button>
 
-                  <button type="button" class="btn btn-primary btn-floating mx-1 d-none">
-                    <i class="fab fa-twitter"></i>
-                  </button>
+                        <button type="button" class="btn btn-primary btn-floating mx-1 d-none">
+                            <i class="fab fa-twitter"></i>
+                        </button>
 
-                  <button type="button" class="btn btn-primary btn-floating mx-1 d-none">
-                    <i class="fab fa-github"></i>
-                  </button>
-                </div>
+                        <button type="button" class="btn btn-primary btn-floating mx-1 d-none">
+                            <i class="fab fa-github"></i>
+                        </button>
+                    </div>
 
-                <p class="text-center">or:</p>
+                    <p class="text-center">or:</p>
 
-                <!-- Name input -->
-                <div class="form-outline mb-4">
-                  <input type="text" id="registerName" class="form-control" />
-                  <label class="form-label" for="registerName">Name</label>
-                </div>
+                    <!-- Name input -->
+                    <div class="form-outline mb-4">
+                        <input type="text" id="daftarNama" class="form-control" />
+                        <label class="form-label" for="daftarNama">Name</label>
+                    </div>
 
-                <!-- Email input -->
-                <div class="form-outline mb-4">
-                  <input type="email" id="registerEmail" class="form-control" />
-                  <label class="form-label" for="registerEmail">Email</label>
-                </div>
-                <!-- WA input -->
-                <div class="form-outline mb-4">
-                  <input type="email" id="registerWa" class="form-control" />
-                  <label class="form-label" for="registerWa">Whatsapp (62xxxxxx)</label>
-                </div>
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <input type="email" id="daftarEmail" class="form-control cekemail" />
+                        <label class="form-label" for="daftarEmail">Email</label>
+                    </div>
+                    <!-- WA input -->
+                    <div class="form-outline mb-4">
+                        <input type="number" id="daftarWa" class="form-control " />
+                        <label class="form-label" for="daftarEmail">Whatsapp (62xxxxxx)</label>
+                    </div>
 
-                <!-- Submit button -->
-                <button type="submit" class="btn btn-primary btn-block mb-3">
-                  Sign Up 
-                </button>
-              </form>
+                    <!-- Submit button -->
+                    <button id="btnRegister" type="submit" class="btn btn-primary btn-block mb-3">
+                        Sign Up
+                    </button>
+                    <div class="text-center">
+                        <p id="result2"></p>
+                    </div>
+                </form>
             </div>
           </div>
           <!-- Pills content -->
@@ -512,7 +575,54 @@
     </div>
   </div>
 </div>
+    <!--Modal: modalCookie-->
+<!-- Button trigger modal -->
+<button
+  type="button"
+  class="btn btn-primary"
+  data-mdb-toggle="modal"
+  data-mdb-target="#staticBackdrop"
+>
+  Launch static backdrop modal
+</button>
 
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="modalCookie1"
+  data-mdb-backdrop="static"
+  data-mdb-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Informasi </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-mdb-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+     
+Kami menggunakan cookies untuk meningkatkan layanan website.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Saya Paham</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!--Modal: modalCookie-->
   <!-- toast -->
 <div
   class="toast fade mx-auto"
@@ -522,7 +632,7 @@
   aria-atomic="true"
   data-mdb-autohide="true"
   data-mdb-delay="2000"
-  data-mdb-position="top-right"
+  data-mdb-position="bottom-center"
   data-mdb-append-to-body="true"
   data-mdb-stacking="true"
   data-mdb-width="350px"
@@ -533,83 +643,20 @@
     <small>11 mins ago</small>
     <button type="button" class="btn-close btn-close-white" data-mdb-dismiss="toast" aria-label="Close"></button>
   </div>
-  <div class="toast-body text-white">Selamat datang <span id="spanNama"></span></div>
+  <div class="toast-body text-white"><span id="spanNama"></span></div>
 </div>
   <!-- toast -->
-
+  </section>
   <!-- End your project here-->
 
   <!-- MDB -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
   <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
   <script type="text/javascript" src="plugins/js/cookie.min.js"></script>
-  
+  <script type="text/javascript" src="plugins/js/onboarding.min.js"></script>
   <!-- Custom scripts -->
-  <script type="text/javascript">
-                    function checkLoginState() {
-                    FB.getLoginStatus(function(response) {
-                      statusChangeCallback(response);
-                    });
-                  }
-                  function statusChangeCallback(response) {
-                    if (response.status === 'connected') {
-    // The user is logged in and has authenticated your
-    // app, and response.authResponse supplies
-    // the user's ID, a valid access token, a signed
-    // request, and the time the access token 
-    // and signed request each expire.
-    var uid = response.authResponse.userID;
-    var accessToken = response.authResponse.accessToken;
-    //todo: insert ke cookie dia udah login 
-    FB.api('/me', function(response) {
-       console.log('Good to see you, ' + response.name + '.');
-       document.getElementById('spanNama').innerText=response.name;
-       let basicInstance = mdb.Toast.getInstance(document.getElementById('basic-success-example'));
-       basicInstance.show();
-       $('.showNama').text(response.name )
-       Cookie.set('fbid', response.userID, {expires: 30});
-       Cookie.set('nama', response.name, {expires: 30});
-       location.reload();
-     });
-  } else if (response.status === 'not_authorized') {
-    // The user hasn't authorized your application.  They
-    // must click the Login button, or you must call FB.login
-    // in response to a user gesture, to launch a login dialog.
-          FB.login(function(response) {
-          if (response.authResponse) {
-          console.log('Welcome!  Fetching your information.... ');
-          FB.api('/me', function(response) {
-            console.log('Good to see you, ' + response.name + '.');
-            
-            //todo: insert ke cookie dia udah login 
-            Cookie.set('fbid', response.userID, {expires: 30})
-            Cookie.set('nama', response.name, {expires: 30})
-          });
-          } else {
-          Cookie.set('nama', '', {expires: 30})
-          console.log('User cancelled login or did not fully authorize.');
-          }
-      });
-  } else {
-    // The user isn't logged in to Facebook. You can launch a
-    // login dialog with a user gesture, but the user may have
-    // to log in to Facebook before authorizing your application.
-    //todo : alert dia belum login facebook
-  }
-
-                  }
-
-                  function loadAwal(){
-                    $('.showNama').text(Cookie.get('nama') );
-                    if(Cookie.get('nama')!=''){
-                      document.getElementById('spanNama').innerText=Cookie.get('nama');
-                      let basicInstance = mdb.Toast.getInstance(document.getElementById('basic-success-example'));
-                      basicInstance.show();
-
-                    }
-
-                  }
-  </script>
+  <script type="text/javascript" src="js/lgin.js"></script>
+ 
 </body>
 
 </html>
